@@ -1,0 +1,18 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+
+# dependencies
+/node_modules
+/addon
+
+# IDEs and editors
+
+/.vscode
+
+#System Files
+.DS_Store
+Thumbs.db
+
+#config files
+/dist/config.js
