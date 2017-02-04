@@ -29,7 +29,7 @@ router.param("_id", function(req, res, next, _id){
 
 router.get("/", function(req, res, next){
 	Blog.find({})
-			
+				.sort({ date: -1 })
 				.exec(function(err, blogs){
 					if(err) return next(err);
 					res.json(blogs);

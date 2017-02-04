@@ -12,7 +12,7 @@ var compression = require('compression');
 var cors = require('cors');
 
 
-// var leadership = require('./routes/api/leadership');
+
 var people = require('./routes/api/people');
 var blog = require('./routes/api/blog');
 var recent = require('./routes/api/home');
@@ -20,6 +20,7 @@ var library = require('./routes/api/library');
 var strike = require('./routes/api/strike');
 var results = require('./routes/strike-result');
 var names = require('./routes/name-result');
+var searchById = require('./routes/search-id-result');
 var app = express();
 
 
@@ -55,6 +56,7 @@ app.use('/landing', recent);
 app.use('/strikes', strike);
 app.use('/search', results);
 app.use('/names', names);
+app.use('/id', searchById);
 // =======================================================
 
 app.use(function(req, res, next) {
@@ -84,5 +86,3 @@ var port = 3000;
 app.listen(port, function() {
 	console.log("Express server is listening on port", port);
 });
-
-
